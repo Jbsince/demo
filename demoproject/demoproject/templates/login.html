@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>LOGIN PAGE</title>
+</head>
+<body style="background-color:lightgreen;">
+  <h1>LOGIN PAGE</h1>
+  <table>
+    <form action="" method="post">
+        {% csrf_token %}
+      <tr>
+        <td>Username:</td>
+        <td><input type="text"  name="username" required></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password"  name="password" required></td>
+      </tr>
+
+ <tr>
+        <td></td>
+        <td><input type="submit" value="Submit"></td>
+      </tr>
+    </form>
+      {% for j in messages %}
+    <h3>{{j}}</h3>
+    {% endfor %}
+  </table>
